@@ -1,5 +1,5 @@
 {
-	"version": "0.0.8",
+	"version": "0.0.9",
 	"license": "MIT",
 	"main": "dist/index.js",
 	"typings": "dist/index.d.ts",
@@ -44,8 +44,8 @@
 		"@nestjs/graphql": "^9.0.4",
 		"@nestjs/platform-express": "^7.0.0 || ^8.0.0",
 		"@nestjs/testing": "^8.0.6",
-		"@sentry/node": "^6.11.0",
-		"@sentry/tracing": "^6.12.0",
+		"@sentry/node": "^6.11.0 || ^7.0.0",
+		"@sentry/tracing": "^6.12.0 || ^7.0.0",
 		"cz-conventional-changelog": "^3.3.0",
 		"husky": "^7.0.2",
 		"reflect-metadata": "^0.1.13",
