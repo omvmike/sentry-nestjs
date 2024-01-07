@@ -1,6 +1,6 @@
 import { Injectable } from '@nestjs/common';
 import * as Sentry from '@sentry/node';
-import { Span } from '@sentry/tracing';
+import { Span} from "@sentry/types";
 import { CustomSamplingContext, Scope, TransactionContext } from '@sentry/types';
 
 @Injectable()

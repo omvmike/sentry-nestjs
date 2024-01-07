@@ -1,7 +1,6 @@
 import { Inject, Injectable, OnApplicationShutdown } from "@nestjs/common";
 import { HttpAdapterHost } from "@nestjs/core";
 import * as Sentry from '@sentry/node';
-import * as Tracing from '@sentry/tracing';
 import { Integration, Options } from "@sentry/types";
 import { SENTRY_MODULE_OPTIONS } from "../constants";
 import { SentryModuleOptions } from "../interfaces";
@@ -22,7 +21,7 @@ export class BootstrapSentry implements OnApplicationShutdown {
 
             const expressTracingIntegrations: Integration[] = [
                 new Sentry.Integrations.Http( { tracing: true } ),
-                new Tracing.Integrations.Express( {
+                new Sentry.Integrations.Express( {
                     app: adapterHost.httpAdapter.getInstance(),
                 } ),
             ];
